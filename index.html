@@ -6,33 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.svg" type="image/x-icon"/>
-
     <title>SQL Uppercase</title>
 </head>
 <body>
-    <div class="container">
+    <main>
         <h1 class="title">SQL Uppercase</h1>
-        <div>
-            <input type="checkbox" id="cbRemoveQuotes" data-target="#sql-query">
-            <label for="cbRemoveQuotes">remove double quotes and plus sign (concatenation)</label>
+        <div class="content">
+            <div class="form-group">
+                <input type="checkbox" id="cbRemoveQuotes" data-target="#sql-query">
+                <label for="cbRemoveQuotes">remove double quotes and plus sign (concatenation)</label>
+            </div>
+            <div class="form-group checkbox">
+                <input type="checkbox" id="cbIncludeAt" data-target="#sql-query">
+                <label for="cbIncludeAt">include verbatim literal @"new query"</label>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="sql-query">put you lowercase sql query here:</label>
+                <textarea class="form-textarea" id="sql-query" cols="60" rows="15"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="new-sql-query">click or focus the input to copy to clipboard the new query</label>
+                <textarea class="form-textarea" id="new-sql-query" cols="60" rows="15" readonly></textarea>
+            </div>
         </div>
-        <div class="form-group checkbox">
-            <input type="checkbox" id="cbIncludeAt" data-target="#sql-query">
-            <label for="cbIncludeAt">include verbatim literal @"new query"</label>
-        </div>
-        <div class="form-group">
-            <label class="form-label" for="sql-query">put you lowercase sql query here:</label>
-            <textarea class="form-textarea" id="sql-query"></textarea>
-        </div>
-        <div class="form-group">
-            <label class="form-label" for="new-sql-query">click or focus the input to copy to clipboard the new query</label>
-            <textarea class="form-textarea" id="new-sql-query" readonly></textarea>
-        </div>
-    </div>
+    </main>
     <footer class="footer">
         <p>Jean Talar :)</p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
